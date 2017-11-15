@@ -2,6 +2,9 @@
 <html>
 	<head>
 		<title>{% for title in meta.title %}{{title}} {% endfor %}</title>
+		{% if csslocn %}
+		<link rel="stylesheet" type="text/css" href="{{csslocn}}">
+		{% endif %}
 	</head>
 	<body>
 		<h1>{% for title in meta.title %}{{title}} {% endfor %}</h1>

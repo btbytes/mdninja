@@ -14,7 +14,7 @@ with open(path.join(here, 'README.rst'), encoding='utf-8') as f:
 
 setup(
     name='mdninja',
-    version='1.0.0',
+    version='1.0.1',
     description='mdninja + markdown + jinja2 = beautiful HTML',
     long_description=long_description,
     url='https://github.com/btbytes/mdninja',
