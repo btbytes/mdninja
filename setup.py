@@ -35,7 +35,7 @@ setup(
     keywords='markdown jinja2 publishing',
     packages=find_packages(exclude=['contrib', 'docs', 'tests']),
     python_requires='~=3.4',
-    install_requires=['markdown', 'jinja2', 'click'],
+    install_requires=['markdown', 'jinja2', 'click', 'markdown-full-yaml-metadata'],
 
     # List additional groups of dependencies here (e.g. development
     # dependencies). You can install these using the following syntax,
