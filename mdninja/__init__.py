@@ -21,12 +21,12 @@ class MdNinja(object):
             env = Environment(loader=PackageLoader('mdninja', 'templates'))
             template = env.get_template('default.html')
         else:
-            path = Path(self.args.outfile).parts
+            path = Path(self.args.template).resolve().parts
             tfile = path[-1]
             print('tfile: ', tfile)
             print('-1: ', os.path.join(*path[:-1]))
             tdir = os.path.join(*path[:-1])
-            if not os.path.isfile(self.args.outfile):
+            if not os.path.isfile(self.args.template):
                 print('template is not a file')
                 sys.exit(0)
             env = Environment(loader=FileSystemLoader(tdir))
