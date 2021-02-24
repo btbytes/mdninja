@@ -32,7 +32,11 @@ class MdNinja(object):
             env = Environment(loader=FileSystemLoader(tdir))
             template = env.get_template(tfile)
         with open(self.args.infile, 'r') as f:
-            md = markdown.Markdown(extensions=['markdown.extensions.meta'])
+            if self.args.yaml:
+                mextensions = ['full_yaml_metadata']
+            else:
+                mextensions = ['markdown.extensions.meta']
+            md = markdown.Markdown(extensions=mextensions)
             html = md.convert(f.read())
         content = template.render(body=html,
                                   csslocn=self.args.csslocn,
@@ -55,6 +59,10 @@ def main():
     parser.add_argument('--template',
                         dest='template',
                         help='template file (Jinja2)')
+    parser.add_argument('--yaml',
+                        dest='yaml',
+                        action='store_true',
+                        help='Enable yaml metadata')
     args = parser.parse_args()
     mdn = MdNinja(args)
     mdn.render_document()
