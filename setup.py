@@ -14,7 +14,7 @@ with open(path.join(here, "README.rst"), encoding="utf-8") as f:
 
 setup(
     name="mdninja",
-    version="1.0.2",
+    version="1.0.3",
     description="mdninja + markdown + jinja2 = beautiful HTML",
     long_description=long_description,
     url="https://github.com/btbytes/mdninja",
@@ -28,9 +28,9 @@ setup(
         "Topic :: Utilities",
         "License :: OSI Approved :: MIT License",
         "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.3",
-        "Programming Language :: Python :: 3.4",
-        "Programming Language :: Python :: 3.5",
+        "Programming Language :: Python :: 3.9",
+        "Programming Language :: Python :: 3.10",
+        "Programming Language :: Python :: 3.11",
     ],
     keywords="markdown jinja2 publishing",
     packages=find_packages(exclude=["contrib", "docs", "tests"]),
